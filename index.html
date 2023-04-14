@@ -62,7 +62,7 @@
                 <h2>Promotion title</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque hic et aliquid similique, exercitationem necessitatibus autem quas aliquam vitae. Laudantium distinctio vitae ipsa quisquam aliquid iste quibusdam culpa officia dicta?</p>
                 <p><i>*Lorem ipsum dolor sit amet, consectetur adipisicing elit.</i></p>
-                <button>Shop now</button>
+                <button type="button" class="btn btn-info btn-lg" id="myBtn">Shop now</button>
             </div>
         </div>
         <div class="panel">
@@ -71,7 +71,7 @@
                 <h2>Promotion title</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque hic et aliquid similique, exercitationem necessitatibus autem quas aliquam vitae. Laudantium distinctio vitae ipsa quisquam aliquid iste quibusdam culpa officia dicta?</p>
                 <p><i>*Lorem ipsum dolor sit amet, consectetur adipisicing elit.</i></p>
-                <button>Shop now</button>
+                <button type="button" class="btn btn-info btn-lg" id="myBtn">Shop now</button>
             </div>
 
             <div class="panel-image">
@@ -87,7 +87,7 @@
             <div class="panel-content panel-content-absolute ">
                 <h2>Gift for your skin</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, rerum.</p>
-                <button class="btn modal">Shop now</button>
+                <button type="button" class="btn btn-info btn-lg" id="myBtn">Shop now</button>
             </div>
 
         </div>
@@ -128,7 +128,7 @@
                 <div class="send-info">
                     <i class="fa-solid fa-envelope"></i>
                     <input type="email" placeholder="Input your email">
-                    <button>Subscribe</button>
+                    <button id="subscribe">Subscribe</button>
                 </div>
                 <div class="social-link">
                     <a href=""><i class="fa-brands fa-twitter"></i></a>
@@ -147,6 +147,42 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Thanks</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Thank for shopp!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="alert alert-success alert-dismissible" style="display: none;">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Success!</strong> This alert box could indicate a successful or positive action.
+    </div>
 </body>
+<script>
+    var off = document.querySelector(".alert")
+    $(document).ready(function() {
+        $("#myBtn").click(function() {
+            $("#myModal").modal();
+        });
+        $("#subscribe").click(function() {
+            off.setAttribute("style", "display:block;")
+        });
+    });
+</script>
 
 </html>
